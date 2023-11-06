@@ -44,7 +44,23 @@ class TicTacToe:
         '''
         Return string representation of current game board
         '''
-        rows = ['|'.join(self. board[r]) for r in range(3)]
+        rows = ['|'.join(self._board[r]) for r in range(3)]
         return '\n-------\n'.join(rows)
+    
+game = TicTacToe()
+
+# Make some moves
+game.mark(2, 1)  # Player 'X' marks the top-left cell
+game.mark(1, 1)  # Player 'O' marks the center cell
+
+# Print the current board
+print(game)
+
+# Check for a winner
+winner = game.winner()
+if winner:
+    print(f"Player {winner} wins!")
+else:
+    print("It's a tie!")
         
 #code snippet by ds and algorithms book
