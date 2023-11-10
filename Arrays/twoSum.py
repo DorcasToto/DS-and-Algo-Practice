@@ -1,4 +1,4 @@
-def twoPointer(nums, target):
+def twoSum(nums, target):
     storedIndices = {}
 
     for i in range(len(nums)):
@@ -10,4 +10,4 @@ def twoPointer(nums, target):
             #add the value(nums[i]) to the dictionary
         storedIndices[nums[i]] = i
 
-print(twoPointer([3,2,1,4,3,7],11))
+print(twoSum([3,2,1,4,3,7],11))
